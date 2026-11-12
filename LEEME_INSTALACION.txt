@@ -1,0 +1,33 @@
+PAUSA5 · ACTUALIZACIÓN ZEZE Y PALETA OFICIAL
+
+CAMBIOS SOLICITADOS:
+- Seis estados nuevos: Triste, Cansado, Tranquilo, Ansioso, Feliz y Tenso.
+- Cada estado incluye la mascota Zeze PNG y cinco ejercicios propios de 1 minuto.
+- Tema oscuro predeterminado con los seis colores exactos del PDF.
+- Botones superiores reordenados: instalar, cambiar tema, preferencias, menú.
+- Se conservaron rutinas, temporizador, estadísticas, preferencias, PWA, contacto, menús y carrusel.
+
+INSTALACIÓN EN EL REPOSITORIO DE PRUEBAS:
+1. Descomprime el ZIP.
+2. Sube los archivos en la RAÍZ de tu repositorio GitHub (como en la versión anterior).
+3. Sube también la carpeta assets/ con sus seis imágenes, manteniendo la ruta assets/zeze-triste.png etc.
+4. Confirma el commit. GitHub Pages publicará la nueva versión.
+5. Recarga la página; si estás usando la PWA, ciérrala y vuelve a abrirla para actualizar el caché.
+6. Antes de reemplazar una versión definitiva, prueba todos los ánimos y una rutina completa.
+
+No se modificaron los archivos originales ni la página pública anterior.
+
+
+NOVEDAD: MÓDULO NOCTURNO (NOVIEMBRE 2026)
+- Nueva tarjeta voluntaria en la portada, debajo de los botones de micro-pausas.
+- Tres pasos, sin guardar respuestas sobre medicamentos.
+- Audio ORIGINAL de desconexión de 3 minutos: assets/desconexion-nocturna-3min.mp3
+- Botón DAE abre el directorio oficial de contactos por sede de INACAP.
+- El porcentaje 76% del borrador NO se publicó porque no se pudo verificar una fuente.
+- Archivos añadidos: noche.css y noche.js.
+- Service worker actualizado para la nueva versión.
+
+SUBE TODO EL CONTENIDO DE ESTA CARPETA A LA RAÍZ DEL REPOSITORIO.
+No borres la carpeta assets: contiene tanto las mascotas como el MP3.
+Comprueba la versión instalada en móvil; si no aparece, cierra y reabre la PWA
+y recarga GitHub Pages cuando termine el despliegue.

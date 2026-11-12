@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#132220"
+    >
+
+    <meta
+        name="description"
+        content="Pausa5: micro-rutinas adaptativas de 5 minutos para estudiantes."
+    >
+
+    <meta
+        property="og:title"
+        content="Pausa5 | 5 minutos para moverte"
+    >
+
+    <meta
+        property="og:description"
+        content="Micro-rutinas adaptativas de 5 minutos para estudiantes."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <title>
+        Pausa5 | 5 minutos para moverte
+    </title>
+
+    <link
+        rel="manifest"
+        href="./manifest.json"
+    >
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="./icon.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+    <link rel="stylesheet" href="./noche.css">
+
+</head>
+
+
+<body class="dark">
+
+
+    <a
+        class="skip-link"
+        href="#contenido"
+    >
+        Saltar al contenido
+    </a>
+
+
+    <div
+        id="splash"
+        class="splash"
+    >
+
+        <div class="splash-logo">
+            PAUSA<span>5</span>
+        </div>
+
+        <p>
+            Tu pausa empieza aquí
+        </p>
+
+    </div>
+
+
+    <header class="header">
+
+
+        <a
+            class="logo"
+            href="#inicio"
+        >
+            PAUSA<span>5</span>
+        </a>
+
+
+        <nav class="nav" id="navegacionPrincipal" aria-label="Navegación principal">
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#estado">
+                ¿Cómo te sientes?
+            </a>
+
+            <a href="#rutina">
+                Rutina
+            </a>
+
+            <a href="#progreso">
+                Progreso
+            </a>
+
+            <a href="#beneficios">
+                Beneficios
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button
+                id="botonInstalar"
+                class="icon-btn install-hidden"
+                type="button"
+                title="Instalar Pausa5"
+            >
+                ⬇️
+            </button>
+
+            <button
+                id="botonTema"
+                class="icon-btn"
+                type="button"
+                title="Cambiar tema"
+            >
+                🌙
+            </button>
+
+            <button
+                id="botonPreferencias"
+                class="icon-btn"
+                type="button"
+                title="Preferencias"
+            >
+                ⚙️
+            </button>
+
+            <button
+                id="botonMenuMovil"
+                class="icon-btn mobile-menu-toggle"
+                type="button"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="navegacionPrincipal"
+            >
+                ☰
+            </button>
+
+
+            <button
+                class="header-cta iniciar-rutina"
+                type="button"
+            >
+                Comenzar
+            </button>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <main id="contenido">
+
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+
+            <div class="hero-content reveal">
+
+
+                <div class="eyebrow">
+                    🎓 Pensado para estudiantes
+                </div>
+
+
+                <h1>
+
+                    Tu mente también
+
+                    <span>
+                        necesita moverse.
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-copy">
+
+                    Entre clases, trabajos, pruebas y estrés,
+                    date 5 minutos para activar tu cuerpo,
+                    cambiar de ritmo y volver a tus actividades.
+
+                </p>
+
+
+
+                <div
+                    id="resumeBanner"
+                    class="resume-banner hidden"
+                >
+
+
+                    <div>
+
+                        <small>
+                            TIENES UNA PAUSA PENDIENTE
+                        </small>
+
+                        <strong id="resumeTexto">
+                            Ejercicio pendiente
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resume-actions">
+
+                        <button
+                            id="reanudarRutina"
+                            class="mini-btn primary"
+                            type="button"
+                        >
+                            Continuar
+                        </button>
+
+                        <button
+                            id="descartarRutina"
+                            class="mini-btn"
+                            type="button"
+                        >
+                            Descartar
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="daily-card">
+
+
+                    <div class="daily-icon">
+                        💚
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            MENSAJE DE HOY
+                        </small>
+
+                        <p id="fraseDiaria">
+                            Cinco minutos también cuentan.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="hero-buttons">
+
+
+                    <button
+                        class="btn btn-primary iniciar-rutina"
+                        type="button"
+                    >
+                        ▶ Comenzar mi Pausa5
+                    </button>
+
+
+                    <a
+                        class="btn btn-secondary"
+                        href="#estado"
+                    >
+                        Elegir cómo me siento
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- NUEVO: acceso voluntario al módulo nocturno, sin alterar rutinas. -->
+                <button type="button" id="abrirNoche" class="night-card" aria-haspopup="dialog" aria-controls="nocheModal">
+                    <span class="night-card-icon" aria-hidden="true">🌙</span>
+                    <span class="night-card-text">
+                        <strong>¿Noche difícil?</strong>
+                        <span>Lee esto antes de tomar algo para dormir.</span>
+                    </span>
+                    <span class="night-card-arrow" aria-hidden="true">›</span>
+                </button>
+
+                <div class="stats">
+
+
+                    <article class="stat">
+
+                        <span>
+                            🔥
+                        </span>
+
+                        <div>
+
+                            <strong id="rachaValor">
+                                0
+                            </strong>
+
+                            <small>
+                                días de racha
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat">
+
+                        <span>
+                            ✅
+                        </span>
+
+                        <div>
+
+                            <strong id="rutinasValor">
+                                0
+                            </strong>
+
+                            <small>
+                                rutinas
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat">
+
+                        <span>
+                            ⏱️
+                        </span>
+
+                        <div>
+
+                            <strong id="minutosValor">
+                                0
+                            </strong>
+
+                            <small>
+                                minutos
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <aside class="hero-card reveal">
+
+
+                <div class="hero-card-icon">
+                    🏃
+                </div>
+
+
+                <p class="hero-card-label">
+                    Tu pausa activa
+                </p>
+
+
+                <div class="big-five">
+                    5
+                </div>
+
+
+                <div class="minutes-label">
+                    MINUTOS
+                </div>
+
+
+                <div class="hero-card-divider"></div>
+
+
+                <div class="hero-card-grid">
+
+
+                    <div>
+
+                        <strong>
+                            5
+                        </strong>
+
+                        <span>
+                            ejercicios
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            1 min
+                        </strong>
+
+                        <span>
+                            cada uno
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            equipamiento
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+
+        <section
+            class="mood-section"
+            id="estado"
+        >
+
+
+            <div class="section-heading reveal">
+
+
+                <p class="section-kicker">
+                    TU PAUSA, TU MOMENTO
+                </p>
+
+
+                <h2>
+
+                    ¿Cómo te sientes
+
+                    <span>
+                        hoy?
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    No todos los días necesitas lo mismo.
+                    Elige cómo te sientes y Pausa5 preparará
+                    una micro-rutina para ti.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="mood-grid">
+
+                <button
+                    class="mood-card reveal"
+                    data-estado="triste"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <div class="mood-emoji">
+                        <img src="./assets/zeze-triste.png" alt="Zeze triste" width="116" height="116" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Estoy triste</h3>
+                    <p>Cinco minutos suaves para escucharte, moverte con calma y darte un respiro.</p>
+                </button>
+
+                <button
+                    class="mood-card reveal"
+                    data-estado="cansado"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <div class="mood-emoji">
+                        <img src="./assets/zeze-cansado.png" alt="Zeze cansado" width="116" height="116" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Estoy cansado</h3>
+                    <p>Activa tu cuerpo poco a poco, con movimientos sencillos y sin exigirte.</p>
+                </button>
+
+                <button
+                    class="mood-card reveal"
+                    data-estado="tranquilo"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <div class="mood-emoji">
+                        <img src="./assets/zeze-tranquilo.png" alt="Zeze tranquilo" width="116" height="116" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Estoy tranquilo</h3>
+                    <p>Mantén tu bienestar con una secuencia relajada de movimiento y respiración.</p>
+                </button>
+
+                <button
+                    class="mood-card reveal"
+                    data-estado="ansioso"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <div class="mood-emoji">
+                        <img src="./assets/zeze-ansioso.png" alt="Zeze ansioso" width="116" height="116" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Estoy ansioso</h3>
+                    <p>Una rutina tranquila para concentrarte en movimientos simples y recuperar el ritmo.</p>
+                </button>
+
+                <button
+                    class="mood-card reveal"
+                    data-estado="feliz"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <div class="mood-emoji">
+                        <img src="./assets/zeze-feliz.png" alt="Zeze feliz" width="116" height="116" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Estoy feliz</h3>
+                    <p>Aprovecha tu buen ánimo con cinco minutos de movimiento activo y entretenido.</p>
+                </button>
+
+                <button
+                    class="mood-card reveal"
+                    data-estado="tenso"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <div class="mood-emoji">
+                        <img src="./assets/zeze-tenso.png" alt="Zeze tenso" width="116" height="116" loading="lazy" decoding="async">
+                    </div>
+                    <h3>Estoy tenso</h3>
+                    <p>Afloja las zonas cargadas del cuerpo con movimientos lentos y cuidadosos.</p>
+                </button>
+
+            </div>
+
+
+            <div
+                id="estadoSeleccionado"
+                class="selected-mood hidden"
+                role="region"
+                aria-label="Rutina preparada según tu estado de ánimo"
+                aria-live="polite"
+                tabindex="-1"
+            >
+
+
+                <div
+                    id="estadoSeleccionadoEmoji"
+                    class="selected-mood-emoji"
+                >
+                    <img src="./assets/zeze-tranquilo.png" alt="Zeze tranquilo" width="90" height="90">
+                </div>
+
+
+                <div class="selected-mood-info">
+
+
+                    <small>
+                        TU PAUSA5 ESTÁ LISTA
+                    </small>
+
+
+                    <h3 id="estadoSeleccionadoTitulo">
+                        Estoy tranquilo
+                    </h3>
+
+
+                    <p id="estadoSeleccionadoTexto">
+
+                        Hemos preparado una rutina
+                        de cinco minutos para ti.
+
+                    </p>
+
+
+                    <div class="selected-mood-details">
+
+                        <span>
+                            ✓ 5 ejercicios
+                        </span>
+
+                        <span>
+                            ✓ 5 minutos
+                        </span>
+
+                        <span>
+                            ✓ Sin equipamiento
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="selected-mood-buttons">
+
+
+                    <button
+                        id="comenzarEstado"
+                        class="btn btn-primary"
+                        type="button"
+                    >
+                        ▶ Comenzar mi rutina
+                    </button>
+
+
+                    <button
+                        id="cambiarEstado"
+                        class="btn btn-secondary"
+                        type="button"
+                    >
+                        Elegir otro estado
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <section
+            class="routine-section"
+            id="rutina"
+        >
+
+
+            <div class="section-heading reveal">
+
+
+                <p class="section-kicker">
+                    TU PAUSA ACTIVA
+                </p>
+
+
+                <h2>
+
+                    5 ejercicios.
+
+                    <span>
+                        5 minutos.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Una micro-rutina sencilla para levantarte,
+                    moverte y romper largos períodos sentado.
+
+                </p>
+
+
+                <div
+                    id="rutinaSeleccionadaTexto"
+                    class="routine-selected-label hidden"
+                >
+                    <img class="zeze-miniatura" src="./assets/zeze-tranquilo.png" alt=""> <span>Pausa de equilibrio</span>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="exercise-grid">
+
+
+                <article class="exercise-card reveal">
+
+                    <div class="exercise-number">
+                        1
+                    </div>
+
+                    <div class="exercise-emoji">
+                        🚶
+                    </div>
+
+                    <h3>
+                        Marcha en el lugar
+                    </h3>
+
+                    <p>
+                        Mueve suavemente brazos y piernas para comenzar a activar el cuerpo.
+                    </p>
+
+                    <span class="time-pill">
+                        ⏱ 1 minuto
+                    </span>
+
+                </article>
+
+
+
+                <article class="exercise-card reveal">
+
+                    <div class="exercise-number">
+                        2
+                    </div>
+
+                    <div class="exercise-emoji">
+                        🏋️
+                    </div>
+
+                    <h3>
+                        Sentadillas suaves
+                    </h3>
+
+                    <p>
+                        Realiza movimientos controlados y mantén un ritmo cómodo.
+                    </p>
+
+                    <span class="time-pill">
+                        ⏱ 1 minuto
+                    </span>
+
+                </article>
+
+
+
+                <article class="exercise-card reveal">
+
+                    <div class="exercise-number">
+                        3
+                    </div>
+
+                    <div class="exercise-emoji">
+                        🙆
+                    </div>
+
+                    <h3>
+                        Movilidad de hombros
+                    </h3>
+
+                    <p>
+                        Haz círculos suaves con los hombros y mueve lentamente los brazos.
+                    </p>
+
+                    <span class="time-pill">
+                        ⏱ 1 minuto
+                    </span>
+
+                </article>
+
+
+
+                <article class="exercise-card reveal">
+
+                    <div class="exercise-number">
+                        4
+                    </div>
+
+                    <div class="exercise-emoji">
+                        🦵
+                    </div>
+
+                    <h3>
+                        Elevación de rodillas
+                    </h3>
+
+                    <p>
+                        Alterna las rodillas manteniendo un ritmo que te resulte cómodo.
+                    </p>
+
+                    <span class="time-pill">
+                        ⏱ 1 minuto
+                    </span>
+
+                </article>
+
+
+
+                <article class="exercise-card reveal">
+
+                    <div class="exercise-number">
+                        5
+                    </div>
+
+                    <div class="exercise-emoji">
+                        🧘
+                    </div>
+
+                    <h3>
+                        Estiramiento y respiración
+                    </h3>
+
+                    <p>
+                        Termina con movimientos suaves y una respiración tranquila.
+                    </p>
+
+                    <span class="time-pill">
+                        ⏱ 1 minuto
+                    </span>
+
+                </article>
+
+
+            </div>
+
+
+
+            <div class="carousel-controls" aria-label="Explorar los cinco ejercicios">
+                <button type="button" class="carousel-step" id="ejercicioAnterior" aria-label="Ver ejercicio anterior">← Anterior</button>
+                <span id="contadorEjercicios" role="status" aria-live="polite">1 de 5</span>
+                <button type="button" class="carousel-step" id="ejercicioSiguiente" aria-label="Ver ejercicio siguiente">Siguiente →</button>
+            </div>
+
+            <div class="safety-note reveal">
+
+                <span>
+                    💡
+                </span>
+
+                <p>
+
+                    Realiza los movimientos a tu propio ritmo.
+                    Detente si sientes dolor, mareos o molestias.
+
+                </p>
+
+            </div>
+
+
+
+            <button
+                class="btn btn-primary routine-cta iniciar-rutina reveal"
+                type="button"
+            >
+                ▶ Iniciar los 5 minutos
+            </button>
+
+
+        </section>
+
+
+
+        <section
+            class="progress-section"
+            id="progreso"
+        >
+
+
+            <div class="section-heading reveal">
+
+
+                <p class="section-kicker">
+                    TU PROGRESO
+                </p>
+
+
+                <h2>
+
+                    Pequeñas pausas.
+
+                    <span>
+                        Progreso real.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Tu información se guarda únicamente
+                    en este navegador.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="progress-dashboard reveal">
+
+
+                <div class="progress-summary">
+
+
+                    <article>
+
+                        <span>
+                            🔥
+                        </span>
+
+                        <strong id="perfilRacha">
+                            0
+                        </strong>
+
+                        <small>
+                            racha actual
+                        </small>
+
+                    </article>
+
+
+
+                    <article>
+
+                        <span>
+                            ✅
+                        </span>
+
+                        <strong id="perfilRutinas">
+                            0
+                        </strong>
+
+                        <small>
+                            rutinas
+                        </small>
+
+                    </article>
+
+
+
+                    <article>
+
+                        <span>
+                            ⏱️
+                        </span>
+
+                        <strong id="perfilMinutos">
+                            0
+                        </strong>
+
+                        <small>
+                            minutos
+                        </small>
+
+                    </article>
+
+
+
+                    <article>
+
+                        <span>
+                            💚
+                        </span>
+
+                        <strong id="perfilFavorita">
+                            —
+                        </strong>
+
+                        <small>
+                            pausa más elegida
+                        </small>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <div class="calendar-card">
+
+
+                    <div class="card-title-row">
+
+
+                        <div>
+
+                            <small>
+                                ACTIVIDAD RECIENTE
+                            </small>
+
+                            <h3>
+                                Últimos 28 días
+                            </h3>
+
+                        </div>
+
+
+                        <span class="calendar-legend">
+                            Menos ▫ ▪ Más
+                        </span>
+
+
+                    </div>
+
+
+                    <div
+                        id="calendarioActividad"
+                        class="activity-calendar"
+                    ></div>
+
+
+                </div>
+
+
+
+                <div class="achievements-card">
+
+
+                    <div class="card-title-row">
+
+
+                        <div>
+
+                            <small>
+                                LOGROS
+                            </small>
+
+                            <h3>
+                                Tus insignias
+                            </h3>
+
+                        </div>
+
+
+                        <span id="logrosContador">
+                            0 / 5
+                        </span>
+
+
+                    </div>
+
+
+                    <div
+                        id="listaLogros"
+                        class="achievement-grid"
+                    ></div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <section
+            class="benefits-section"
+            id="beneficios"
+        >
+
+
+            <div class="section-heading reveal">
+
+
+                <p class="section-kicker">
+                    ¿POR QUÉ HACER UNA PAUSA?
+                </p>
+
+
+                <h2>
+
+                    Una pausa breve puede ayudarte a
+
+                    <span>
+                        cambiar de ritmo.
+                    </span>
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="benefit-grid">
+
+
+                <article class="benefit-card reveal">
+
+                    <div class="benefit-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Desconéctate un momento
+                    </h3>
+
+                    <p>
+                        Haz una pequeña pausa entre tus actividades académicas.
+                    </p>
+
+                </article>
+
+
+
+                <article class="benefit-card reveal">
+
+                    <div class="benefit-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Mueve tu cuerpo
+                    </h3>
+
+                    <p>
+                        Interrumpe largos periodos sentado con movimientos sencillos.
+                    </p>
+
+                </article>
+
+
+
+                <article class="benefit-card reveal">
+
+                    <div class="benefit-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Continúa renovado
+                    </h3>
+
+                    <p>
+                        Termina tu pausa y vuelve a tus actividades a tu propio ritmo.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <section
+            class="about-section"
+            id="acerca"
+        >
+
+
+            <div class="about-card reveal">
+
+
+                <div>
+
+                    <p class="section-kicker">
+                        SOBRE PAUSA5
+                    </p>
+
+                    <h2>
+                        Una herramienta simple para hacer una pausa.
+                    </h2>
+
+                </div>
+
+
+                <p>
+
+                    Pausa5 ofrece micro-rutinas de movimiento
+                    y respiración para estudiantes.
+
+                    No realiza diagnósticos ni sustituye
+                    recomendaciones médicas.
+
+                    Haz cada movimiento a tu ritmo y
+                    detente si sientes molestias.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <section class="final-banner">
+
+
+            <div class="final-banner-content reveal">
+
+
+                <span>
+                    💚 PAUSA5
+                </span>
+
+
+                <h2>
+                    No necesitas una hora.
+                </h2>
+
+
+                <p>
+
+                    A veces solo necesitas
+
+                    <strong>
+                        5 minutos para volver a ti.
+                    </strong>
+
+                </p>
+
+
+                <button
+                    class="btn btn-light iniciar-rutina"
+                    type="button"
+                >
+                    Comenzar mi Pausa5
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- NUEVO: ruta nocturna opcional. Las decisiones no se guardan. -->
+    <section id="nocheModal" class="night-overlay" role="dialog" aria-modal="true"
+             aria-hidden="true" aria-labelledby="nocheTitulo">
+        <div class="night-sheet" tabindex="-1">
+            <header class="night-sheet-header">
+                <div>
+                    <p class="night-kicker">🌙 UNA PAUSA ANTES DE DORMIR</p>
+                    <h2 id="nocheTitulo">Antes de tomar algo para dormir</h2>
+                </div>
+                <button id="cerrarNoche" class="night-close" type="button" aria-label="Cerrar y volver a Pausa5">✕</button>
+            </header>
+            <div class="night-progress" aria-label="Progreso de la guía">
+                <span id="nochePasoIndicador">Paso 1 de 3</span>
+                <div class="night-dots" aria-hidden="true"><i class="active"></i><i></i><i></i></div>
+            </div>
+            <div class="night-step" data-noche-paso="1">
+                <h3>Hablemos un momento</h3>
+                <p>Entendemos que la época de certámenes agota. ¿Estás pensando en tomar algún inductor del sueño o tranquilizante sin receta hoy?</p>
+                <div class="night-actions">
+                    <button type="button" class="night-btn night-btn-main" id="nocheSi">Sí, lo estaba pensando</button>
+                    <button type="button" class="night-btn night-btn-outline" id="nocheNo">No, solo quiero relajarme</button>
+                </div>
+                <p class="night-privacy">🔒 Tu respuesta no se guarda ni se envía a ningún servicio.</p>
+            </div>
+            <div class="night-step" data-noche-paso="2" hidden>
+                <img class="night-zeze" src="./assets/zeze-cansado.png" width="130" height="130"
+                     alt="Zeze cansado, la mascota de Pausa5" loading="lazy">
+                <h3>Tu descanso importa</h3>
+                <p>No estás solo/a. En época de evaluaciones es comprensible sentir presión por dormir y rendir. Tomar inductores del sueño o tranquilizantes sin indicación profesional puede ser riesgoso. Mereces descansar y recibir orientación si la necesitas.</p>
+                <p class="night-small">Si tienes dudas sobre medicamentos, consulta a un profesional de salud. No cambies ni suspendas un tratamiento recetado sin orientación.</p>
+                <div class="night-actions">
+                    <button type="button" class="night-btn night-btn-main" id="nocheAlternativa">Ver alternativa de 3 min</button>
+                </div>
+            </div>
+            <div class="night-step" data-noche-paso="3" hidden>
+                <h3>Una alternativa para este momento</h3>
+                <p>Te invitamos a escuchar una desconexión nocturna guiada, sin exigencias. Si lo prefieres, puedes buscar apoyo institucional.</p>
+                <div class="night-actions">
+                    <button type="button" class="night-btn night-btn-main" id="nocheReproducir">▶ Iniciar audio de desconexión nocturna (3 min)</button>
+                    <div id="nocheAudioContenedor" class="night-audio-panel" hidden>
+                        <label for="nocheAudio">Relajación guiada con Zeze · 3 minutos</label>
+                        <audio id="nocheAudio" controls preload="metadata" src="./assets/desconexion-nocturna-3min.mp3"></audio>
+                        <p id="nocheAudioEstado" role="status" aria-live="polite">Puedes pausar o repetir el audio cuando quieras.</p>
+                    </div>
+                    <a class="night-btn night-btn-outline" id="nocheDAE" href="https://portal.inacap.cl/estudiantes/contacto-por-sede"
+                       target="_blank" rel="noopener noreferrer">¿Esto pasa seguido? Contactar a la DAE ↗</a>
+                </div>
+                <p class="night-small">La DAE es la Dirección de Asuntos Estudiantiles de INACAP. Busca los datos de tu sede en el enlace oficial.</p>
+            </div>
+        </div>
+    </section>
+
+    <section
+        id="panelRutina"
+        class="routine-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+    >
+
+
+        <div class="routine-window">
+
+
+            <button
+                id="cerrarRutina"
+                class="close-routine"
+                type="button"
+            >
+                ✕
+            </button>
+
+
+
+            <div
+                id="vistaCountdown"
+                class="routine-view"
+            >
+
+
+                <p class="routine-badge">
+                    PREPÁRATE
+                </p>
+
+
+                <p class="muted">
+                    Busca un espacio cómodo.
+                </p>
+
+
+                <div
+                    id="countdown"
+                    class="countdown"
+                >
+                    3
+                </div>
+
+
+                <h2 id="textoCountdown">
+                    Comenzamos en...
+                </h2>
+
+
+            </div>
+
+
+
+            <div
+                id="vistaEjercicio"
+                class="routine-view hidden"
+            >
+
+
+                <div class="routine-topline">
+
+
+                    <p
+                        id="progresoTexto"
+                        class="routine-badge"
+                    >
+                        Ejercicio 1 de 5
+                    </p>
+
+
+                    <button
+                        id="botonSonido"
+                        class="sound-btn"
+                        type="button"
+                    >
+                        🔊
+                    </button>
+
+
+                </div>
+
+
+
+                <div
+                    id="emojiRutina"
+                    class="routine-emoji"
+                >
+                    🚶
+                </div>
+
+
+                <h2 id="nombreEjercicio">
+                    Marcha en el lugar
+                </h2>
+
+
+                <p
+                    id="descripcionEjercicio"
+                    class="routine-description"
+                >
+                    Mueve suavemente brazos y piernas.
+                </p>
+
+
+
+                <div class="timer-ring">
+
+
+                    <svg viewBox="0 0 220 220">
+
+
+                        <circle
+                            class="ring-bg"
+                            cx="110"
+                            cy="110"
+                            r="92"
+                        ></circle>
+
+
+                        <circle
+                            id="circuloProgreso"
+                            class="ring-progress"
+                            cx="110"
+                            cy="110"
+                            r="92"
+                        ></circle>
+
+
+                    </svg>
+
+
+                    <div
+                        id="temporizador"
+                        class="timer-text"
+                    >
+                        01:00
+                    </div>
+
+
+                </div>
+
+
+
+                <div
+                    id="puntosProgreso"
+                    class="progress-dots"
+                ></div>
+
+
+                <p
+                    id="mensajeTiempo"
+                    class="timer-message"
+                >
+                    Ve a tu propio ritmo 💚
+                </p>
+
+
+
+                <div class="routine-controls">
+
+
+                    <button
+                        id="botonAnterior"
+                        class="control-btn"
+                        type="button"
+                    >
+                        ← Anterior
+                    </button>
+
+
+                    <button
+                        id="botonPausar"
+                        class="control-btn pause-btn"
+                        type="button"
+                    >
+                        ⏸ Pausar
+                    </button>
+
+
+                    <button
+                        id="botonSiguiente"
+                        class="control-btn next-btn"
+                        type="button"
+                    >
+                        Siguiente →
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                id="vistaTransicion"
+                class="routine-view hidden"
+            >
+
+
+                <div class="transition-check">
+                    ✓
+                </div>
+
+
+                <p class="routine-badge">
+                    EJERCICIO COMPLETADO
+                </p>
+
+
+                <h2>
+                    ¡Muy bien!
+                </h2>
+
+
+                <p class="muted">
+                    Siguiente:
+                </p>
+
+
+                <strong
+                    id="siguienteNombre"
+                    class="next-name"
+                >
+                    Sentadillas suaves
+                </strong>
+
+
+            </div>
+
+
+
+            <div
+                id="vistaCompletado"
+                class="routine-view hidden"
+            >
+
+
+                <div
+                    id="confeti"
+                    class="confetti"
+                ></div>
+
+
+                <div class="trophy">
+                    🎉
+                </div>
+
+
+                <p class="routine-badge">
+                    PAUSA5 COMPLETADA
+                </p>
+
+
+                <h2>
+                    ¡Excelente trabajo!
+                </h2>
+
+
+                <p class="completion-copy">
+                    Terminaste los cinco ejercicios.
+                </p>
+
+
+
+                <div class="completion-stats">
+
+
+                    <div>
+
+                        <strong>
+                            5
+                        </strong>
+
+                        <span>
+                            ejercicios
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            5
+                        </strong>
+
+                        <span>
+                            minutos
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            ✓
+                        </strong>
+
+                        <span>
+                            completada
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="after-mood">
+
+
+                    <h3>
+                        ¿Cómo te sientes ahora?
+                    </h3>
+
+
+                    <div class="after-mood-buttons">
+
+
+                        <button
+                            class="after-option"
+                            data-after="igual"
+                            type="button"
+                        >
+                            😣
+                            <span>Igual</span>
+                        </button>
+
+
+                        <button
+                            class="after-option"
+                            data-after="mejor"
+                            type="button"
+                        >
+                            🙂
+                            <span>Un poco mejor</span>
+                        </button>
+
+
+                        <button
+                            class="after-option"
+                            data-after="mucho-mejor"
+                            type="button"
+                        >
+                            😄
+                            <span>Mucho mejor</span>
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="helpful-feedback">
+
+
+                    <p>
+                        ¿Te sirvió esta rutina?
+                    </p>
+
+
+                    <div>
+
+
+                        <button
+                            class="feedback-btn"
+                            data-feedback="si"
+                            type="button"
+                        >
+                            👍 Sí
+                        </button>
+
+
+                        <button
+                            class="feedback-btn"
+                            data-feedback="no"
+                            type="button"
+                        >
+                            👎 No
+                        </button>
+
+
+                    </div>
+
+
+                    <small
+                        id="feedbackGracias"
+                        class="hidden"
+                    >
+                        Gracias por tu respuesta 💚
+                    </small>
+
+
+                </div>
+
+
+
+                <div class="completion-actions">
+
+
+                    <button
+                        id="cerrarFinal"
+                        class="btn btn-secondary"
+                        type="button"
+                    >
+                        Volver
+                    </button>
+
+
+                    <button
+                        id="repetirRutina"
+                        class="btn btn-primary"
+                        type="button"
+                    >
+                        ↻ Repetir
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <section
+        id="onboarding"
+        class="overlay-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+    >
+
+
+        <div class="simple-modal onboarding-modal">
+
+
+            <button
+                id="cerrarOnboarding"
+                class="modal-x"
+                type="button"
+            >
+                ✕
+            </button>
+
+
+
+            <div class="onboarding-step active">
+
+
+                <div class="onboarding-icon">
+                    💚
+                </div>
+
+
+                <p class="section-kicker">
+                    BIENVENIDO A PAUSA5
+                </p>
+
+
+                <h2>
+                    Cinco minutos pueden caber en cualquier día.
+                </h2>
+
+
+                <p>
+                    Elige cómo te sientes y recibe una micro-rutina de 5 minutos.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="onboarding-step">
+
+
+                <div class="onboarding-icon">
+                    🎯
+                </div>
+
+
+                <p class="section-kicker">
+                    ADAPTATIVA
+                </p>
+
+
+                <h2>
+                    Una pausa distinta según tu momento.
+                </h2>
+
+
+                <p>
+
+                    Estresado, cansado, con energía,
+                    triste, cansado, tranquilo, ansioso, feliz o tenso.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="onboarding-step">
+
+
+                <div class="onboarding-icon">
+                    🔥
+                </div>
+
+
+                <p class="section-kicker">
+                    TU PROGRESO
+                </p>
+
+
+                <h2>
+                    Rachas, minutos y logros.
+                </h2>
+
+
+                <p>
+
+                    Todo se guarda localmente en tu dispositivo.
+                    No necesitas una cuenta.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="onboarding-footer">
+
+
+                <div
+                    id="onboardingDots"
+                    class="onboarding-dots"
+                ></div>
+
+
+                <button
+                    id="onboardingSiguiente"
+                    class="btn btn-primary"
+                    type="button"
+                >
+                    Siguiente
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <section
+        id="panelPreferencias"
+        class="overlay-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+    >
+
+
+        <div class="simple-modal preferences-modal">
+
+
+            <button
+                id="cerrarPreferencias"
+                class="modal-x"
+                type="button"
+            >
+                ✕
+            </button>
+
+
+            <p class="section-kicker">
+                PREFERENCIAS
+            </p>
+
+
+            <h2>
+                Haz Pausa5 a tu manera.
+            </h2>
+
+
+
+            <div class="preference-list">
+
+
+                <label class="preference-row">
+
+                    <span>
+
+                        <strong>
+                            Sonido
+                        </strong>
+
+                        <small>
+                            Avisos al comenzar y cambiar ejercicios.
+                        </small>
+
+                    </span>
+
+                    <input
+                        id="preferenciaSonido"
+                        type="checkbox"
+                    >
+
+                </label>
+
+
+
+                <label class="preference-row">
+
+                    <span>
+
+                        <strong>
+                            Vibración
+                        </strong>
+
+                        <small>
+                            Si el dispositivo lo permite.
+                        </small>
+
+                    </span>
+
+                    <input
+                        id="preferenciaVibracion"
+                        type="checkbox"
+                    >
+
+                </label>
+
+
+
+                <label class="preference-row">
+
+                    <span>
+
+                        <strong>
+                            Reducir animaciones
+                        </strong>
+
+                        <small>
+                            Menos movimiento visual.
+                        </small>
+
+                    </span>
+
+                    <input
+                        id="preferenciaMovimiento"
+                        type="checkbox"
+                    >
+
+                </label>
+
+
+
+                <label class="preference-row">
+
+                    <span>
+
+                        <strong>
+                            Recordar mi última selección
+                        </strong>
+
+                        <small>
+                            Recuperar tu última rutina elegida.
+                        </small>
+
+                    </span>
+
+                    <input
+                        id="preferenciaRecordarEstado"
+                        type="checkbox"
+                    >
+
+                </label>
+
+
+            </div>
+
+
+
+            <button
+                id="reiniciarDatos"
+                class="danger-btn"
+                type="button"
+            >
+                Reiniciar mis estadísticas
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <div class="help-wrapper">
+
+
+        <div
+            id="cajaDudas"
+            class="help-panel"
+            aria-hidden="true"
+        >
+
+
+            <button
+                id="cerrarDudas"
+                class="help-close"
+                type="button"
+            >
+                ✕
+            </button>
+
+
+            <div class="help-icon">
+                💬
+            </div>
+
+
+            <h3>
+                ¿Tienes dudas?
+            </h3>
+
+
+            <p>
+                Encuentra respuestas rápidas sobre Pausa5.
+            </p>
+
+
+
+            <div class="faq">
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                >
+                    ¿Necesito equipamiento?
+                    <span>+</span>
+                </button>
+
+
+                <div class="faq-answer">
+
+                    No. Los ejercicios están pensados
+                    para realizarse sin equipamiento.
+
+                </div>
+
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                >
+                    ¿Puedo pausar la rutina?
+                    <span>+</span>
+                </button>
+
+
+                <div class="faq-answer">
+
+                    Sí. Puedes pausar, continuar,
+                    avanzar o volver al ejercicio anterior.
+
+                </div>
+
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                >
+                    ¿Se guarda mi progreso?
+                    <span>+</span>
+                </button>
+
+
+                <div class="faq-answer">
+
+                    Sí. Tus estadísticas se guardan
+                    únicamente en este navegador.
+
+                </div>
+
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                >
+                    ¿Funciona sin internet?
+                    <span>+</span>
+                </button>
+
+
+                <div class="faq-answer">
+
+                    Después de cargar la app al menos una vez,
+                    Pausa5 puede conservar sus archivos principales
+                    sin conexión.
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                id="abrirWhatsapp"
+                class="whatsapp-contact"
+                type="button"
+            >
+                💬 Contactar por WhatsApp
+            </button>
+
+
+            <p
+                id="whatsappAviso"
+                class="whatsapp-note hidden"
+            >
+                El contacto por WhatsApp aún no está configurado.
+            </p>
+
+
+        </div>
+
+
+
+        <button
+            id="botonDudas"
+            class="help-button"
+            type="button"
+        >
+            💬
+
+            <span>
+                ¿Tienes dudas?
+            </span>
+
+        </button>
+
+
+    </div>
+
+
+
+    <div
+        id="toast"
+        class="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+
+    <footer>
+
+
+        <a
+            class="logo footer-logo"
+            href="#inicio"
+        >
+            PAUSA<span>5</span>
+        </a>
+
+
+        <p>
+            Una pausa activa para estudiantes 💚
+        </p>
+
+
+    </footer>
+
+
+
+    <script src="./script.js"></script>
+    <script src="./noche.js"></script>
+
+
+</body>
+
+</html>

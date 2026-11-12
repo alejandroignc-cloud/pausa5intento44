@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "Pausa5 - Micro-rutinas para estudiantes",
+  "short_name": "Pausa5",
+  "description": "Micro-rutinas adaptativas de 5 minutos para estudiantes.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#132220",
+  "theme_color": "#132220",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
